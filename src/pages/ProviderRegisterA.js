@@ -19,7 +19,7 @@ export default function ProviderRegisterA() {
     role: 'Provider'
   });
 
-  // Redirect if 'registerRole' is missing
+
   useEffect(() => {
     const registerRole = localStorage.getItem("registerRole");
     if (!registerRole) {  
