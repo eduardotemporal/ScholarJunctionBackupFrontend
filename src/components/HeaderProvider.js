@@ -10,7 +10,7 @@ return(
       <Link to="/">
         <div className="text-white text-2xl font-bold flex items-center">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-        <a href=""><img src={whitelogo} alt="Logo" class="h-10 w-10 mr-2"/></a>
+        <Link to="/home-provider"><img src={whitelogo} alt="Logo" className="h-10 w-10 mr-2"/></Link>
           Scholar<span className="text-green-400">junction</span>
           <span className="font-semibold text-lg"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  Glad to have you back User!</span>
         </div>

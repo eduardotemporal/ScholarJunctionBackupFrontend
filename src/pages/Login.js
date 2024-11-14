@@ -36,7 +36,17 @@ const handleSubmit = async (e) => {
     localStorage.setItem('userRole', data.user.role);
     console.log(localStorage)
 
-    navigate('/home-scholar');
+    if(data.user.role == "Provider")
+    {
+      navigate('/provider-profile');
+    }
+    else if (data.user.role == "Student")
+    {
+      navigate('/home-scholar');
+    }
+    else{
+      navigate('/');
+    }
   } catch (error) {
     setError(error.message || 'Failed to log in');
   }

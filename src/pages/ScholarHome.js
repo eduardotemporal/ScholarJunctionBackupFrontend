@@ -12,8 +12,13 @@ import HomeImage3 from "../images/home-image-3.png";
 export default function ScholarHome() {
 
   const navigate = useNavigate();
+  const role = localStorage.getItem("userRole");  
 
   useEffect(() => {
+    if(role === 'Provider'){
+    console.log('FUCK')
+    navigate('/')
+    }
     const token = localStorage.getItem("accessToken"); // or use userId
     if (!token) {
       navigate("/");

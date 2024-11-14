@@ -5,7 +5,7 @@ import footerimage from '../images/footer.png';
 
 export default function Footer() {
   return (
-    <footer className="bg-green-700 text-white p-12" style={{ backgroundImage: `url(${footerimage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <footer className="bg-green-700 text-white p-12 opacity-100">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
       <div className="max-w-6xl mx-auto flex flex-wrap justify-between">
         <div className="mb-6">

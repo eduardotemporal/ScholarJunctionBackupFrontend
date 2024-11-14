@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 
 export default function ScholarRegisterX() {
   console.log(localStorage)
+  const userId = localStorage.getItem('userId')
   const [error, setError] = useState('');
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -33,7 +34,7 @@ export default function ScholarRegisterX() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(`${process.env.REACT_APP_API_URL}/users/register-ppi/${localStorage.userId}`, {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/users/register-ppi/${userId}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

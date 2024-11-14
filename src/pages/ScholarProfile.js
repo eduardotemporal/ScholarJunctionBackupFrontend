@@ -14,8 +14,21 @@ export default function ScholarProfile() {
   const [newProfilePic, setNewProfilePic] = useState(null);
   const userId = localStorage.getItem("userId");
   const token = localStorage.getItem("accessToken");
+  const role = localStorage.getItem("userRole");
+
+
 
   useEffect(() => {
+  const isLoggedIn = localStorage.getItem('userId');
+
+  if (!isLoggedIn) {
+    // Redirect to login page if not logged in
+    navigate('/');
+  }
+  if(role == 'Provider'){
+    navigate('/')
+  }
+
     const fetchProfile = async () => {
       try {
       
@@ -42,8 +55,10 @@ export default function ScholarProfile() {
     fetchProfile();
   }, []);
 
+  
+
   const handleImageClick = () => {
-    document.getElementById('fileInput').click(); // Trigger the hidden file input when the profile image is clicked
+    document.getElementById('fileInput').click(); 
   };
 
   const handleImageChange = async (event) => {

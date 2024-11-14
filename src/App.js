@@ -38,6 +38,7 @@ import AboutUsProv from './pages/AboutUsProv';
 import ScholarshipsPage from './pages/ScholarshipsPage';
 import ScholarRegisterX from './pages/ScholarRegisterX'
 import ProviderRegisterX from './pages/ProviderRegisterX'
+import ProviderCriteria from './pages/ProviderCriteria'
 
 /*import AdminDashboard from './pages/AdminDashboard';*/
 
@@ -97,6 +98,7 @@ function App() {
           <Route path="/provider-edit-scholarshipa" element={<ProviderEditScholarshipAwithHeader />} />
           <Route path="/provider-edit-scholarshipb" element={<ProviderEditScholarshipBwithHeader />} />
           <Route path="/provider-edit-scholarshipc" element={<ProviderEditScholarshipCwithHeader />} />
+          <Route path="/provider-criteria-builder" element={<ProviderCriteriawithHeader />} />
 
           <Route path="/scholar-profile" element={<ScholarProfileWithHeader />} />
           <Route path="/scholar-search-course" element={<ScholarSearchCourseWithHeader />} />
@@ -317,6 +319,16 @@ function ProviderHomeWithHeader() {
       <ProviderHome />
     </>
 
+  )
+}
+
+function ProviderCriteriawithHeader() {
+  return (
+    <>
+      <Header />
+      <ProviderCriteria />
+      <Footer/>
+    </>
   )
 }
 
